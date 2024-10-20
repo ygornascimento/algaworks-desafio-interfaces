@@ -1,46 +1,17 @@
 package com.algaworks.desafio.iterfaces.modelo;
 
 public class CarroParticular extends VeiculoAutomotor {
-    private int anoFabricacao;
-    private String modelo;
-    private double valorMercado;
 
     public CarroParticular(String modelo, double valorMercado, int anoFabricacao) {
-        this.modelo = modelo;
-        this.valorMercado = valorMercado;
-        this.anoFabricacao = anoFabricacao;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public double getValorMercado() {
-        return valorMercado;
-    }
-
-    public void setValorMercado(double valorMercado) {
-        this.valorMercado = valorMercado;
-    }
-
-    public int getAnoFabricacao() {
-        return anoFabricacao;
-    }
-
-    public void setAnoFabricacao(int anoFabricacao) {
-        this.anoFabricacao = anoFabricacao;
+        super(modelo, valorMercado, anoFabricacao);
     }
 
     @Override
     public double calcularValorPremio() {
-        if (anoFabricacao < 2000) {
-            return valorMercado * 0.9;
+        if (getAnoFabricacao() < 2000) {
+            return (getValorMercado() * 0.4) * 0.5;
         } else {
-            return valorMercado * 0.4;
+            return getValorMercado() * 0.4;
         }
     }
 
