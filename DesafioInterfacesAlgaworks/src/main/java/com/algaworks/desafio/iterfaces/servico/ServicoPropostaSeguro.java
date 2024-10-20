@@ -8,8 +8,6 @@ public class ServicoPropostaSeguro {
         System.out.println("------------------------------------------");
         System.out.println("Proposta Seguro");
         System.out.println("------------------------------------------");
-
         System.out.println(bem.descrever());
     }
-
 }
